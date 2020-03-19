@@ -41,7 +41,11 @@ def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
     :param strategy:
     :return:
     """
-    
+    dicts = {}
+    keys = range(start, stop)
+    for i in keys:
+        for x in keys:
+            dicts[i] = strategy(x)
 
 
 def gen_set(val_in: str) -> Set:
