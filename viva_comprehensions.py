@@ -13,12 +13,14 @@ def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
     what this method was supposed to do. Hey if you do, maybe you could do some good in this world by
     updating this here docstring to something useful.
 
-    :param start:
-    :param stop:
-    :param parity:
+    :param start: Where to start the list (inclusive).
+    :param stop: Where to stop the list (exclusive).
+    :param parity: Adds
     :return:
     """
-    pass
+    lst = list(range(start, stop, 2))
+    new_list = list(filter(lambda x: (x % 2 == parity), lst))
+    return new_list
 
 
 def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
