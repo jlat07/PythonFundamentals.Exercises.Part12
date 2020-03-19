@@ -44,8 +44,7 @@ def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
     dicts = {}
     keys = range(start, stop)
     for i in keys:
-        for x in keys:
-            dicts[i] = strategy(x)
+        dicts[i] = strategy(i)
 
 
 def gen_set(val_in: str) -> Set:
