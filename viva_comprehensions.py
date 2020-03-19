@@ -18,9 +18,15 @@ def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
     :param parity: Adds
     :return:
     """
-    lst = list(range(start, stop, 2))
-    new_list = list(filter(lambda x: (x % 2 == parity), lst))
-    return new_list
+    if parity == Parity.ODD:
+        list1 = list(range(start, stop, 1))
+        new_list = list(filter((lambda x: x % 2 == 1), list1))
+        return new_list
+    elif parity == Parity.EVEN:
+        list1 = list(range(start, stop, 1))
+        new_list = list(filter((lambda x: x % 2 == 0), list1))
+        return new_list
+    
 
 
 def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
@@ -35,7 +41,7 @@ def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
     :param strategy:
     :return:
     """
-    pass
+    
 
 
 def gen_set(val_in: str) -> Set:
