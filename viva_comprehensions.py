@@ -47,7 +47,7 @@ def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
         dicts[i] = strategy(i)
 
 
-def gen_set(val_in: str) -> Set:
+def gen_set(val_in: str) -> set:
     """
     Oh no some evil developer decided not to write docstrings. Maybe you can use the test cases to decipher
     what this method was supposed to do. Hey if you do, maybe you could do some good in this world by
@@ -55,5 +55,19 @@ def gen_set(val_in: str) -> Set:
 
     :param val_in:
     :return:
+    so takes string. turns it into a set. which elminates duplicates(need to capitlize them some how)
+    
+    then takes string and turns into another set, where it takes the difference of capitale letters from the two sets
+    
     """
-    pass
+    
+    lst =list(val_in)
+    lower_case = []
+    upper_case = []
+    for i in lst:
+        if (i.lst.islower()):
+            lower_case.append(i)
+    for i in lower_case:
+        upper_case.append(i.upper())
+    gen_set = set(upper_case)
+    return gen_set
