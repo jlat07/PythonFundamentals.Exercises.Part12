@@ -45,6 +45,7 @@ def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
     keys = range(start, stop)
     for i in keys:
         dicts[i] = strategy(i)
+    return dicts
 
 
 def gen_set(val_in: str) -> set:
@@ -65,7 +66,7 @@ def gen_set(val_in: str) -> set:
     lower_case = []
     upper_case = []
     for i in lst:
-        if (i.lst.islower()):
+        if (i.islower()):
             lower_case.append(i)
     for i in lower_case:
         upper_case.append(i.upper())
