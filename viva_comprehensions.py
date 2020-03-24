@@ -9,14 +9,10 @@ class Parity(enum.Enum):
 
 def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
     """
-    Oh no some evil developer decided not to write docstrings. Maybe you can use the test cases to decipher
-    what this method was supposed to do. Hey if you do, maybe you could do some good in this world by
-    updating this here docstring to something useful.
-
     :param start: Where to start the list (inclusive).
     :param stop: Where to stop the list (exclusive).
-    :param parity: Adds
-    :return:
+    :param parity: Based on which parity is passed, the method will return even or odd list
+    :return: Returns a list in specified range parity
     """
     if parity == Parity.ODD:
         list1 = list(range(start, stop, 1))
@@ -31,15 +27,10 @@ def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
 
 def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
     """
-    Oh no some evil developer decided not to write docstrings. Maybe you can use the test cases to decipher
-    what this method was supposed to do. Hey if you do, maybe you could do some good in this world by
-    updating this here docstring to something useful.
-
-
-    :param start:
-    :param stop:
-    :param strategy:
-    :return:
+    :param start: Where to start the list (inclusive).
+    :param stop: Where to stop the list (exclusive).
+    :param strategy: takes in a lamda function to carryout on each item in the list
+    :return: Returns a dict with keys in range, and a value with a strategy applied for each key value
     """
     dicts = {}
     keys = range(start, stop)
@@ -50,16 +41,8 @@ def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
 
 def gen_set(val_in: str) -> set:
     """
-    Oh no some evil developer decided not to write docstrings. Maybe you can use the test cases to decipher
-    what this method was supposed to do. Hey if you do, maybe you could do some good in this world by
-    updating this here docstring to something useful.
-
-    :param val_in:
-    :return:
-    so takes string. turns it into a set. which elminates duplicates(need to capitlize them some how)
-    
-    then takes string and turns into another set, where it takes the difference of capitale letters from the two sets
-    
+    :param val_in: Takes in a string
+    :return: Returns a set of only lower case distant characters from the string, and returns them capitalized in the set.
     """
     
     lst =list(val_in)
